@@ -37,12 +37,21 @@
                                     <action selector="pushPlayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a95-iC-V9R"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ExS-Bd-9SN">
+                                <rect key="frame" x="169" y="280" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title=" Stop"/>
+                                <connections>
+                                    <action selector="pushStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e4O-Zh-XAQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="playButton" destination="zoY-76-vgk" id="EFo-zy-rjE"/>
                         <outlet property="recordButton" destination="J5F-TH-HUW" id="Ejm-YM-mwb"/>
+                        <outlet property="stopButton" destination="ExS-Bd-9SN" id="N6M-Si-atr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
