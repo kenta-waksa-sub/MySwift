@@ -18,6 +18,9 @@ class ViewController: UIViewController {
      //documentディレクトリのURLを取得
     let documentDirFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!
     
+    
+    @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +30,14 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func pushRecordButton(_ sender: Any) {
+        audioRecorder?.record()
+    }
+    @IBAction func pushPlayButton(_ sender: Any) {
+        self.play()
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,11 +58,19 @@ class ViewController: UIViewController {
         do {
             try audioRecorder = AVAudioRecorder(url: documentDirFileURL as URL, settings: recordSetting)
         } catch {
-            print("再生時にerror")
+            print("初期設定時にerror")
+        }
+    }
+    
+    // 再生
+    func play(){
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOf: documentDirFileURL)
+        }catch {
+            print("再生時にerror出たよ(´・ω・｀)")
         }
         audioPlayer?.play()
     }
-    
 
 
 }
