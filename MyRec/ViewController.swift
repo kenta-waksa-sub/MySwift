@@ -14,22 +14,54 @@ class ViewController: UIViewController {
     let fileManager = FileManager()
     var audioRecorder: AVAudioRecorder?
     var audioPlayer: AVAudioPlayer?
-    
+    let status = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeAudio)
     
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         //　再生録音の初期化関数を呼び出す
         self.setupAudioRecorder()
+        
+        // アクセス許可
+        if status == AVAuthorizationStatus.authorized {
+            // アクセス許可あり
+            print("アクセス許可あり")
+        } else if status == AVAuthorizationStatus.restricted {
+            // ユーザー自身にカメラへのアクセスが許可されていない
+            print("ユーザー自身にカメラへのアクセスが許可されていない")
+        } else if status == AVAuthorizationStatus.notDetermined {
+            // まだアクセス許可を聞いていない
+            print("まだアクセス許可を聞いていない")
+        } else if status == AVAuthorizationStatus.denied {
+            // アクセス許可されていない
+            print("アクセス許可されていない")
+        }
         
     }
 
     @IBAction func pushRecordButton(_ sender: Any) {
         audioRecorder?.record()
+        // アクセス許可
+        if status == AVAuthorizationStatus.authorized {
+            // アクセス許可あり
+            print("アクセス許可あり")
+        } else if status == AVAuthorizationStatus.restricted {
+            // ユーザー自身にカメラへのアクセスが許可されていない
+            print("ユーザー自身にカメラへのアクセスが許可されていない")
+        } else if status == AVAuthorizationStatus.notDetermined {
+            // まだアクセス許可を聞いていない
+            print("まだアクセス許可を聞いていない")
+        } else if status == AVAuthorizationStatus.denied {
+            // アクセス許可されていない
+            print("アクセス許可されていない")
+        }
+
     }
     
     @IBAction func pushStopButton(_ sender: Any) {

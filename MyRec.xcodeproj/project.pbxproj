@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					D2F145AF1F146FC5003227A5 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 42XYZEWKER;
 						ProvisioningStyle = Automatic;
 					};
 					D2F145C31F146FC5003227A5 = {
@@ -355,7 +356,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -398,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -410,8 +411,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 42XYZEWKER;
 				INFOPLIST_FILE = MyRec/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.sample.MyRec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,8 +425,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 42XYZEWKER;
 				INFOPLIST_FILE = MyRec/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.sample.MyRec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,6 +508,7 @@
 				D2F145DA1F146FC5003227A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2F145DB1F146FC5003227A5 /* Build configuration list for PBXNativeTarget "MyRecTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +517,7 @@
 				D2F145DD1F146FC5003227A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2F145DE1F146FC5003227A5 /* Build configuration list for PBXNativeTarget "MyRecUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +526,7 @@
 				D2F145E01F146FC5003227A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
